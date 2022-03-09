@@ -6,7 +6,6 @@ import {
 } from "react-router-dom";
 
 import style from  './index.module.css'
-import App from './App'
 import Home from './components/pages/home'
 import Contact from './components/pages/contact'
 import Company from './components/pages/company'
@@ -24,7 +23,7 @@ render(
   <NavBar/>
 
     <Routes>
-      <Route exact path="/" element={<App />}/>
+      <Route exact path="/" element={<Home />}/>
       <Route path="/home" element={<Home />}/>
       <Route path="/contato" element={<Contact />}/>
       <Route path="/company" element={<Company />}/>

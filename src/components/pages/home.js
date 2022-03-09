@@ -1,5 +1,16 @@
+import Img from '../../img/savings.svg'
+import Styles from '../pages/home.module.css'
+import LinkProjects from '../Layout/linkProjects/linkprojects'
+
 function Home(){
-    return ( <h1>home</h1>)
+    return ( 
+        <section className={Styles.home_container}>
+            <h1> Bem-vindo ao <span>Costs</span></h1>
+            <p>Comece a gerenciar os seus projetos agora mesmo!</p>
+            <LinkProjects to="/NewProject/" text="Criar Projeto"/>
+            <img src={Img} alt="imagemCosts"/>
+        </section>
+    )
 }
 
 export default Home;
