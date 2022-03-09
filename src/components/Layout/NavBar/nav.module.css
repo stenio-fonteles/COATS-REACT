@@ -1,0 +1,39 @@
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    background-color: #222;
+    height: 10vh;
+    align-items: center;
+}
+.min-height{
+    min-height: 75%;
+
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #222;
+    padding: 1em;
+}
+.list{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+.item {
+    margin-right: 1em;
+    font-size: 20px;
+}
+.item::marker{
+    color: transparent;
+}
+.item a{
+    color: #fff;
+    text-decoration: none;
+}
+.item a:hover{
+    color: #ffbb33;
+}

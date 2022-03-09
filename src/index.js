@@ -5,21 +5,23 @@ import {
   Route,
 } from "react-router-dom";
 
-
+import style from  './index.module.css'
 import App from './App'
 import Home from './components/pages/home'
 import Contact from './components/pages/contact'
 import Company from './components/pages/company'
 import NewProject from './components/pages/newproject'
+import Project from './components/pages/Project'
 
-import Container from './components/Layout/container'
+import NavBar from './components/Layout/NavBar/nav'
+import Footer from './components/Layout/Footer/Footer'
 
 
 
 render(
-  <BrowserRouter>
+  <BrowserRouter ClassName={style}>
   
-  <Container/>
+  <NavBar/>
 
     <Routes>
       <Route exact path="/" element={<App />}/>
@@ -27,7 +29,10 @@ render(
       <Route path="/contato" element={<Contact />}/>
       <Route path="/company" element={<Company />}/>
       <Route path="/NewProject" element={<NewProject />}/>
+      <Route path="/Project" element={<Project />}/>
     </Routes>
+  
+  <Footer/>
   </BrowserRouter>,
   document.getElementById("root")
 );
