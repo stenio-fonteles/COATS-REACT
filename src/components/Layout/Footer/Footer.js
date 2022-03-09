@@ -8,7 +8,7 @@ function Footer(){
                 <li><FaInstagram/></li>
                 <li><FaLinkedin/></li>
             </ul>
-            <p className={styke.copy_right}><span>COSTS</span> &copy;2022</p>
+            <p className={style.copy_right}><span>COSTS</span> &copy;2022</p>
         </footer>
     )
 }
