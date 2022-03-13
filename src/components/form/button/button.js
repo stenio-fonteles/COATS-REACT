@@ -1,6 +1,6 @@
 import styles from '../button/button.module.css'
 
-function Button({ text}){
+function Button({ text, }){
     return(
          <div >
              <button className={styles.btn}>{text}</button>
