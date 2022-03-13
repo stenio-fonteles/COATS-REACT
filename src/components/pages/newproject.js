@@ -5,16 +5,16 @@ import ProjectForm from '../Project/projectForm'
 
 function NewProject(){
 
-    const navigate = useNavigate();
+    var navigate = useNavigate();
 
 
     function createPost(project){
         //initialize cost and services
         project.cost = 0
         project.services = []
-        fetch("http://localhost:5000/projects", {
+        fetch("http://localhost:5000/project", {
             method:'POST',
-            Headers:{
+            headers:{
                 'Content-Type':'application/json',
             },
             body: JSON.stringify(project),
@@ -22,7 +22,8 @@ function NewProject(){
         .then((data) => {
             console.log(data)
             //redirect
-            navigate.push('/home', {message: 'Projeto criado com sucesso!'})
+           
+            navigate('/project', {message: 'Projeto criado com sucesso!'})
         })
         .catch((err) => console.log(err))
     }
