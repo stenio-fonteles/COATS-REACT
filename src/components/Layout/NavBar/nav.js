@@ -15,7 +15,7 @@ function Container(props){
                 <Link to="/home">Home</Link>
             </li>
             <li className={styles.item}>
-                <Link to="/Project">Projeto</Link>
+                <Link to="/Project">Projetos</Link>
             </li>
             <li className={styles.item}>
                 <Link to="/contato">Contato</Link>
