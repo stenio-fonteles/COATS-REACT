@@ -19,7 +19,7 @@ function Project(){
             </div>
                 {message && <Message type="success" msg={message}/>}
             <div>
-                <h3>Projetos...</h3>
+                <h3>Meus Projetos...</h3>
 
             </div>
                 
