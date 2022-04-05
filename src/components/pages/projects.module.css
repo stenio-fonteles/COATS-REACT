@@ -1,9 +1,14 @@
 .project_container{
     padding: 2em;
+    
 }
 
 .title_container{
     display: flex;
     justify-content: space-between;
     margin-bottom: 2em;
+   
+}
+.teste{
+    
 }
