@@ -1,6 +1,6 @@
 # Bem-vindo ao COSTS!!!
 
-![Imagem home](../COATS-REACT/src/img/readMe.PNG)
+![Imagem home](https://github.com/stenio-fonteles/COATS-REACT/blob/main/src/img/readMe.PNG)
 
 ## comandos básicos
 
