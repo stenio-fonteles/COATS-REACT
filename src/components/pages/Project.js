@@ -10,6 +10,7 @@ function Project(){
     //GET DO BD
     const [projects, setProjects] = useState([])
     const [removeLoading,setRemoveLoding] = useState(false)
+    const [projectMessage, setProjectMessage] = useState('')
     
     useEffect(()=>{
         fetch('http://localhost:5000/project',{
@@ -26,6 +27,20 @@ function Project(){
         })
         .catch((err) => console.log(err))
     },[])
+    function removeProject(id) {
+        fetch(`http://localhost:5000/project/${id}`,{
+            method: 'delete',
+            headers:{
+                'Content-Type':'application/json',
+            },
+        })
+        .then((resp) => resp.json())
+        .then((data) => {
+            setProjects(projects.filter((project) => project.id !== id))
+            setProjectMessage('Projeto removido com sucesso')
+        })
+        .catch((err) => console.log(err))
+    }
 
     //.....//.....
     const localizacao = useLocation()
@@ -41,6 +56,7 @@ function Project(){
                 <LinkProjects to="/NewProject/" text="Criar Projeto"/>
             </div>
                 {message && <Message type="success" msg={message}/>}
+                {projectMessage && <Message type="success" msg={projectMessage}/>}
             <div className={styles.containerCards}  >
                 <div className={styles.cards} >
                     {projects.length > 0 && 
@@ -51,6 +67,7 @@ function Project(){
                         budget={project.budget}
                         category={project.category.name}
                         kay={project.id}
+                        handleRemove={removeProject}
                         />
                     ))}
                     {!removeLoading && <Loader/>}
