@@ -14,6 +14,7 @@ import Project from './components/pages/Project'
 
 import NavBar from './components/Layout/NavBar/nav'
 import Footer from './components/Layout/Footer/Footer'
+import ProjectUnico from "./components/pages/ProjectUnico";
 
 
 
@@ -29,6 +30,7 @@ render(
       <Route path="/company" element={<Company />}/>
       <Route path="/NewProject" element={<NewProject />}/>
       <Route path="/Project" element={<Project />}/>
+      <Route path="/ProjectUnico/:id" element={<ProjectUnico />}/>
     </Routes>
   
   <Footer/>
